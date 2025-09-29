@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurs – Wybierz Swój Pakiet!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Patrycja Trzaskawka - Fotografia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://js.stripe.com/v3/"></script>
@@ -12,199 +12,314 @@
 <body>
     <header>
         <div class="logo">
-            <h1>MasterClass</h1>
-            <p>Odkryj wyjątkową wartość w jednej paczce!</p>
+            <h1>Patrycja Trzaskawka</h1>
+            <p>Fotografia z pasją</p>
         </div>
         <nav>
             <ul>
-                <li><a href="#hero"><i class="fas fa-home"></i> Start</a></li>
-                <li><a href="#oferty"><i class="fas fa-box"></i> Oferty</a></li>
-                <li><a href="#opinie"><i class="fas fa-star"></i> Opinie</a></li>
-                <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
+                <li><a href="#oferty"><i class="fas fa-gift"></i> Oferta</a></li>
+                <li><a href="#omnie"><i class="fas fa-heart"></i> O mnie</a></li>
                 <li><a href="#kontakt"><i class="fas fa-envelope"></i> Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- HERO SECTION NA SRODKU -->
-        <section id="hero" class="section hero-section">
-            <div class="hero-content">
-                <h1>Transformuj Swoje Umiejętności</h1>
-                <p class="hero-subtitle">Profesjonalny kurs, który zmieni sposób w jaki podchodzisz do rozwoju</p>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Zadowolonych uczniów</span>
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="section-header">
+                <h2>Moje Portfolio</h2>
+                <p>Zobacz magiczne chwile uchwycone w kadrze</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- PROJECT 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/13.jpg" alt="Sesja ślubna" data-full="images/13.jpg">
+                        <div class="project-overlay">
+                            <button class="zoom-btn" data-image="images/13.jpg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="hero-stat">
-                        <span class="stat-number">94%</span>
-                        <span class="stat-label">Wskaźnik sukcesu</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="stat-number">4.9/5</span>
-                        <span class="stat-label">Ocena kursantów</span>
+                    <div class="project-info">
+                        <h3>Sesja Ślubna</h3>
+                        <p>Magiczny dzień pełen emocji i miłości</p>
+                        <div class="project-tags">
+                            <span class="tag">Ślub</span>
+                            <span class="tag">Romantyczna</span>
+                        </div>
                     </div>
                 </div>
-                <a href="#oferty" class="cta-button">
-                    <i class="fas fa-arrow-down"></i>
-                    Zobacz Oferty
-                </a>
+
+                <!-- PROJECT 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/7.jpg" alt="Sesja rodzinna" data-full="images/7.jpg">
+                        <div class="project-overlay">
+                            <button class="zoom-btn" data-image="images/7.jpg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sesja Rodzinna</h3>
+                        <p>Prawdziwe emocje i rodzinne ciepło</p>
+                        <div class="project-tags">
+                            <span class="tag">Rodzinna</span>
+                            <span class="tag">Naturalna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/15.jpg" alt="Sesja biznesowa" data-full="images/15.jpg">
+                        <div class="project-overlay">
+                            <button class="zoom-btn" data-image="images/15.jpg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sesja Biznesowa</h3>
+                        <p>Profesjonalny wizerunek dla Twojego biznesu</p>
+                        <div class="project-tags">
+                            <span class="tag">Biznes</span>
+                            <span class="tag">Professional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/13.jpg" alt="Sesja ciążowa" data-full="images/13.jpg">
+                        <div class="project-overlay">
+                            <button class="zoom-btn" data-image="images/13.jpg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sesja Ciążowa</h3>
+                        <p>Niezwykły czas oczekiwania w magicznej odsłonie</p>
+                        <div class="project-tags">
+                            <span class="tag">Ciąża</span>
+                            <span class="tag">Kobieca</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/14.jpg" alt="Sesja narzeczeńska" data-full="images/14.jpg">
+                        <div class="project-overlay">
+                            <button class="zoom-btn" data-image="images/14.jpg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sesja Narzeczeńska</h3>
+                        <p>Miłość w najpiękniejszym wydaniu</p>
+                        <div class="project-tags">
+                            <span class="tag">Narzeczeńska</span>
+                            <span class="tag">Para</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/8.jpg" alt="Sesja dziecięca" data-full="images/8.jpg">
+                        <div class="project-overlay">
+                            <button class="zoom-btn" data-image="images/8.jpg">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sesja Dziecięca</h3>
+                        <p>Beztroska dzieciństwa uchwycona w obiektywie</p>
+                        <div class="project-tags">
+                            <span class="tag">Dzieci</span>
+                            <span class="tag">Radosna</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- OFERTY NA SRODKU STRONY -->
-        <section id="oferty" class="section">
+        <!-- OFERTY SECTION -->
+        <section id="oferty" class="section offers-section">
             <div class="section-header">
-                <h2>Wybierz Idealny Pakiet Dla Siebie</h2>
-                <p>Trzy poziomy dostępu - od podstaw do mistrzostwa</p>
+                <h2>Moja Oferta</h2>
+                <p>Wybierz pakiet idealny dla Twoich potrzeb</p>
             </div>
 
             <div class="pricing-grid">
                 <!-- PAKIET PODSTAWOWY -->
                 <div class="pricing-card">
                     <div class="card-header">
-                        <h3>Podstawowy</h3>
-                        <div class="price">97 zł</div>
-                        <p>Idealny na start</p>
+                        <h3>Sesja Standard</h3>
+                        <div class="price">497 zł</div>
+                        <p>Idealna na start</p>
                     </div>
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Pełny dostęp do kursu wideo</li>
-                        <li><i class="fas fa-check"></i> Materiały PDF do pobrania</li>
-                        <li><i class="fas fa-check"></i> 30 dni wsparcia mailowego</li>
-                        <li><i class="fas fa-times"></i> Grupa VIP na Facebook</li>
-                        <li><i class="fas fa-times"></i> Konsultacje 1:1</li>
-                        <li><i class="fas fa-times"></i> Personalizowany plan</li>
+                        <li><i class="fas fa-check"></i> 1 godzina sesji</li>
+                        <li><i class="fas fa-check"></i> 10 profesjonalnie edytowanych zdjęć</li>
+                        <li><i class="fas fa-check"></i> Konsultacja przed sesją</li>
+                        <li><i class="fas fa-times"></i> Lokalizacja studyjna</li>
+                        <li><i class="fas fa-times"></i> Makijaż profesjonalny</li>
+                        <li><i class="fas fa-times"></i> Album fotograficzny</li>
                     </ul>
-                    <button class="buy-btn" data-plan="basic">Wybieram Pakiet</button>
+                    <button class="buy-btn" data-plan="standard">Zakup</button>
                 </div>
 
-                <!-- PAKIET PREMIUM (NAJPOPULARNIEJSZY) -->
+                <!-- PAKIET PREMIUM -->
                 <div class="pricing-card popular">
                     <div class="popular-badge">NAJPOPULARNIEJSZE</div>
                     <div class="card-header">
-                        <h3>Premium</h3>
-                        <div class="price">197 zł</div>
-                        <p>Najlepszy stosunek jakości do ceny</p>
+                        <h3>Sesja Premium</h3>
+                        <div class="price">897 zł</div>
+                        <p>Najlepszy stosunek jakości</p>
                     </div>
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Wszystko z Pakietu Podstawowego</li>
-                        <li><i class="fas fa-check"></i> Grupa VIP na Facebook</li>
-                        <li><i class="fas fa-check"></i> 3 miesiące wsparcia</li>
-                        <li><i class="fas fa-check"></i> Dodatkowe materiały premium</li>
-                        <li><i class="fas fa-check"></i> Q&A live co tydzień</li>
-                        <li><i class="fas fa-times"></i> Konsultacje 1:1</li>
+                        <li><i class="fas fa-check"></i> 2 godziny sesji</li>
+                        <li><i class="fas fa-check"></i> 25 profesjonalnie edytowanych zdjęć</li>
+                        <li><i class="fas fa-check"></i> Konsultacja + stylizacja</li>
+                        <li><i class="fas fa-check"></i> Lokalizacja studyjna</li>
+                        <li><i class="fas fa-check"></i> Makijaż profesjonalny</li>
+                        <li><i class="fas fa-times"></i> Album fotograficzny</li>
                     </ul>
-                    <button class="buy-btn popular-btn" data-plan="premium">Wybieram Pakiet</button>
+                    <button class="buy-btn popular-btn" data-plan="premium">Zakup</button>
                 </div>
 
                 <!-- PAKIET VIP -->
                 <div class="pricing-card">
                     <div class="card-header">
-                        <h3>VIP</h3>
-                        <div class="price">397 zł</div>
+                        <h3>Sesja VIP</h3>
+                        <div class="price">1497 zł</div>
                         <p>Kompleksowe rozwiązanie</p>
                     </div>
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Wszystko z Pakietu Premium</li>
-                        <li><i class="fas fa-check"></i> 2 konsultacje 1:1 (60 min)</li>
-                        <li><i class="fas fa-check"></i> Personalizowany plan działania</li>
-                        <li><i class="fas fa-check"></i> Dożywotni dostęp do kursu</li>
-                        <li><i class="fas fa-check"></i> Priorytetowe wsparcie</li>
-                        <li><i class="fas fa-check"></i> Certyfikat ukończenia</li>
+                        <li><i class="fas fa-check"></i> 4 godziny sesji</li>
+                        <li><i class="fas fa-check"></i> 50 profesjonalnie edytowanych zdjęć</li>
+                        <li><i class="fas fa-check"></i> Pełna stylizacja + makijaż</li>
+                        <li><i class="fas fa-check"></i> 2 lokalizacje do wyboru</li>
+                        <li><i class="fas fa-check"></i> Album fotograficzny premium</li>
+                        <li><i class="fas fa-check"></i> Obróbka w stylu fine art</li>
                     </ul>
-                    <button class="buy-btn" data-plan="vip">Wybieram Pakiet</button>
+                    <button class="buy-btn" data-plan="vip">Zakup</button>
                 </div>
             </div>
 
             <div class="guarantee">
                 <i class="fas fa-shield-alt"></i>
-                <p><strong>Gwarancja satysfakcji:</strong> 30 dni na zwrot bez podawania przyczyny</p>
+                <p><strong>Gwarancja satysfakcji:</strong> Jeśli nie będziesz zadowolony, zwrócę 100% zaliczki</p>
             </div>
         </section>
 
-        <!-- OPINIE -->
-        <section id="opinie" class="section">
-            <h2>Co Mówią Nasi Klienci</h2>
-            <div class="opinie-list">
-                <div class="opinia">
-                    <div class="stars">★★★★★</div>
-                    <p>„Pakiet Premium zmienił wszystko! Wreszcie zrozumiałem o co chodzi.”</p>
-                    <span>– Anna, Warszawa</span>
+        <!-- O MNIE SECTION -->
+        <section id="omnie" class="section about-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="images/3.jpg" alt="Patrycja Trzaskawka">
                 </div>
-                <div class="opinia">
-                    <div class="stars">★★★★★</div>
-                    <p>„Konsultacje VIP były warte każdej złotówki. Oszczędziły mi miesięcy prób i błędów.”</p>
-                    <span>– Michał, Kraków</span>
-                </div>
-                <div class="opinia">
-                    <div class="stars">★★★★★</div>
-                    <p>„Grupa na Facebooku to złoto! Wsparcie społeczności jest bezcenne.”</p>
-                    <span>– Kasia, Wrocław</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq" class="section">
-            <h2>Najczęściej Zadawane Pytania</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <strong>Kiedy otrzymam dostęp do kursu?</strong>
-                    <p>Dostęp otrzymasz natychmiast po zaksięgowaniu płatności.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>Czy mogę zmienić pakiet później?</strong>
-                    <p>Tak, możesz upgrade'ować swój pakiet w dowolnym momencie, dopłacając różnicę.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>Jak długo trwają konsultacje VIP?</strong>
-                    <p>Każda konsultacja trwa 60 minut i umawiamy się na dogodny termin.</p>
+                <div class="about-content">
+                    <h2>Szalenie się cieszę, że tu jesteś!</h2>
+                    <div class="about-text">
+                        <p>Rozgość się proszę i zobacz to, co wypełnia moje serce…</p>
+                        
+                        <p>Jeśli interesuje Cię sesja zdjęciowa, zapraszam do mojego portfolio i do zakładki "Oferta", gdzie znajdziesz najnowszy cennik moich usług, a także szczegółowe informacje dotyczące sesji i przygotowania do niej.</p>
+                        
+                        <p>Liczę, że znajdziesz coś dla siebie… Coś co wypełni Cię światłem i pięknem… bo na tym najbardziej mi zależy…</p>
+                        
+                        <p>A jeśli marzysz o tym, by poszerzyć wraz ze mną swe umiejętności fotograficzne – zapraszam Cię do kontaktu, gdzie możesz zaznajomić się z moją ofertą i dobrać sesję, która najbardziej zaspokoi twoje potrzeby.</p>
+                        
+                        <p>Czekają na Ciebie sesje ślubne, rodzinne, biznesowe, ciążowe i wiele, wiele innych…</p>
+                        
+                        <p>Liczę, że wkrótce się spotkamy i nasz wspólny czas będzie dla Ciebie tak samo wyjątkowy i wspaniały jak i dla mnie.</p>
+                        
+                        <p class="signature">Czekam na Ciebie z niecierpliwością i z otwartym sercem…<br>Do zobaczenia…<br><strong>Patrycja</strong></p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- KONTAKT -->
-        <section id="kontakt" class="section">
-            <h2>Masz Pytania?</h2>
-            <p>Napisz do nas: <a href="mailto:kontakt@masterclass.pl">kontakt@masterclass.pl</a></p>
+        <!-- KONTAKT SECTION - NA SAMYM DOLE -->
+        <section id="kontakt" class="section contact-section">
+            <div class="section-header">
+                <h2>Skontaktuj Się</h2>
+                <p>Chętnie odpowiem na wszystkie Twoje pytania</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>patrycja@fotografia.pl</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+48 123 456 789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Lokalizacja</h4>
+                            <p>Warszawa, Polska</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- MODAL DO POWIĘKSZANIA ZDJĘĆ -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption"></div>
+    </div>
+
     <footer>
-        <p>&copy; 2025 MasterClass – Wszystkie prawa zastrzeżone</p>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2025 Patrycja Trzaskawka Fotografia. Wszystkie prawa zastrzeżone.</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="stripe.js"></script>
-    
-    <script>
-        // Animacja pojawiania się sekcji przy scrollowaniu
-        const sections = document.querySelectorAll('.section');
-        function checkVisibility() {
-            const triggerBottom = window.innerHeight / 1.2;
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < triggerBottom) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-
-        // Smooth scroll dla linków w nawigacji
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 100,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        window.addEventListener('load', checkVisibility);
-        window.addEventListener('scroll', checkVisibility);
-    </script>
+    <script src="portfolio.js"></script>
 </body>
 </html>
