@@ -14,6 +14,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     padding-top: 110px;
+    margin: 0; /* Reset margin */
 }
 
 header {
@@ -25,7 +26,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
     box-shadow: var(--shadow);
     border-bottom-left-radius: var(--radius);
@@ -33,6 +34,7 @@ header {
     animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1) forwards;
     opacity: 0;
     gap: 30px;
+    box-sizing: border-box; /* Ensure padding does not affect width */
 }
 
 @keyframes fadeIn {
@@ -43,8 +45,9 @@ header {
 header .logo {
     flex: 1;
     min-width: 120px;
-    max-width: 220px; /* Limit width on larger screens */
+    max-width: 220px;
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
 
 header .logo h1 {
@@ -53,7 +56,7 @@ header .logo h1 {
     color: var(--accent-dark);
     letter-spacing: 1px;
     margin-bottom: 6px;
-    transition: font-size 0.3s ease; /* Smooth scaling of font size */
+    transition: font-size 0.3s ease;
 }
 
 header .logo p {
@@ -63,16 +66,17 @@ header .logo p {
 }
 
 header .logo h1:hover {
-    transform: scale(1.1); /* Powiększenie logo */
+    transform: scale(1.1); /* Logo hover effect */
 }
 
 nav {
     flex: 2 1 400px;
     display: flex;
     justify-content: flex-end;
-    max-width: 100vw;
+    max-width: 100%;
     box-sizing: border-box;
     overflow-x: auto;
+    padding-right: 10px; /* Prevent overflow on small screens */
 }
 
 nav ul {
@@ -110,7 +114,7 @@ nav ul li a {
 nav ul li a:hover {
     background: var(--main-gradient);
     color: var(--accent-dark);
-    transform: scale(1.08); /* Powiększenie linków w nawigacji */
+    transform: scale(1.08); /* Link hover effect */
     box-shadow: 0 2px 12px rgba(255, 64, 129, 0.08);
 }
 
@@ -163,7 +167,7 @@ nav ul li a i {
 }
 
 .product-img img:hover {
-    transform: scale(1.05); /* Powiększenie obrazka produktu */
+    transform: scale(1.05); /* Product image hover effect */
 }
 
 .product-info {
@@ -207,7 +211,7 @@ nav ul li a i {
 
 .buy-btn:hover {
     background: var(--accent-dark);
-    transform: scale(1.05); /* Powiększenie przy najechaniu na przycisk */
+    transform: scale(1.05); /* Button hover effect */
 }
 
 .product-features {
@@ -257,8 +261,8 @@ nav ul li a i {
 }
 
 .opinia:hover {
-    transform: scale(1.05); /* Powiększenie przy najechaniu na opinię */
-    box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12); /* Zwiększony cień */
+    transform: scale(1.05); /* Opinion hover effect */
+    box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12); /* Increased shadow */
 }
 
 .opinia span {
@@ -293,13 +297,49 @@ nav ul li a i {
 }
 
 .faq-item:hover {
-    transform: scale(1.05); /* Powiększenie przy najechaniu na pytanie */
-    box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12); /* Zwiększony cień */
+    transform: scale(1.05); /* FAQ item hover effect */
+    box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12); /* Increased shadow */
 }
 
 .faq-item strong {
     color: var(--accent-dark);
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* --- KONTAKT --- */
+#kontakt {
+    text-align: center;
+}
+
+#kontakt h2 {
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+}
+
+#kontakt a {
+    color: var(--accent);
+    text-decoration: none;
     font-weight: 600;
+}
+
+#kontakt a:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--main-gradient);
+    color: #fff;
+    text-align: center;
+    padding: 22px 0 18px;
+    margin-top: 40px;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow);
 }
 
 /* --- RESPONSYWNOŚĆ --- */
