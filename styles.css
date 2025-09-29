@@ -35,7 +35,6 @@ header {
     opacity: 0;
     gap: 30px;
     box-sizing: border-box; /* Ensure padding does not affect width */
-    flex-wrap: wrap; /* Allow wrapping of header items */
 }
 
 @keyframes fadeIn {
@@ -44,7 +43,7 @@ header {
 }
 
 header .logo {
-    flex: 1 1 150px;
+    flex: 1;
     min-width: 120px;
     max-width: 220px;
     transition: transform 0.3s ease;
@@ -53,7 +52,7 @@ header .logo {
 
 header .logo h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     color: var(--accent-dark);
     letter-spacing: 1px;
     margin-bottom: 6px;
@@ -61,7 +60,7 @@ header .logo h1 {
 }
 
 header .logo p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #888;
     margin-top: 0;
 }
@@ -78,7 +77,6 @@ nav {
     box-sizing: border-box;
     overflow-x: auto;
     padding-right: 10px; /* Prevent overflow on small screens */
-    flex-wrap: wrap; /* Allow wrapping of navigation items */
 }
 
 nav ul {
@@ -345,10 +343,12 @@ footer {
 }
 
 /* --- RESPONSYWNOŚĆ --- */
+
+/* Dla ekranów o szerokości do 1100px */
 @media (max-width: 1100px) {
     header {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 10px;
         padding: 18px 3vw 12px 3vw;
     }
@@ -359,7 +359,7 @@ footer {
 
     nav {
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     nav ul {
@@ -375,10 +375,11 @@ footer {
     .product-img img {
         width: 90vw;
         max-width: 400px;
-        height: 300px;
+        height: auto; /* Umożliwia skalowanie proporcjonalne */
     }
 }
 
+/* Dla ekranów o szerokości do 700px */
 @media (max-width: 700px) {
     body {
         padding-top: 140px;
@@ -386,19 +387,19 @@ footer {
 
     header {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         padding: 12px 2vw 8px 2vw;
         gap: 10px;
     }
 
     header .logo h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     nav ul {
         flex-direction: column;
         gap: 10px;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .section {
@@ -416,7 +417,7 @@ footer {
     .product-img img {
         width: 98vw;
         max-width: 320px;
-        height: 180px;
+        height: auto; /* Umożliwia skalowanie proporcjonalne */
     }
 
     .opinie-list {
@@ -424,6 +425,7 @@ footer {
     }
 }
 
+/* Dla ekranów o szerokości do 480px */
 @media (max-width: 480px) {
     body {
         padding-top: 170px;
@@ -443,6 +445,10 @@ footer {
     .product-img img {
         width: 98vw;
         max-width: 220px;
-        height: 120px;
+        height: auto; /* Umożliwia skalowanie proporcjonalne */
     }
+}
+/* Ukryj paski przewijania w nawigacji na małych ekranach */
+nav::-webkit-scrollbar {
+    display: none;
 }
