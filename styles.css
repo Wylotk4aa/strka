@@ -41,9 +41,10 @@ header {
 }
 
 header .logo {
-    flex: 1 1 220px;
+    flex: 1;
     min-width: 120px;
-    transition: transform 0.3s ease; /* Animacja logo */
+    max-width: 220px; /* Limit width on larger screens */
+    transition: transform 0.3s ease;
 }
 
 header .logo h1 {
@@ -52,6 +53,7 @@ header .logo h1 {
     color: var(--accent-dark);
     letter-spacing: 1px;
     margin-bottom: 6px;
+    transition: font-size 0.3s ease; /* Smooth scaling of font size */
 }
 
 header .logo p {
@@ -157,7 +159,7 @@ nav ul li a i {
     box-shadow: 0 4px 18px rgba(255, 64, 129, 0.10);
     background: #f6f6f6;
     display: block;
-    transition: transform 0.3s ease; /* Animacja powiększania obrazka */
+    transition: transform 0.3s ease;
 }
 
 .product-img img:hover {
@@ -251,7 +253,7 @@ nav ul li a i {
     font-size: 1.08rem;
     color: #444;
     margin-bottom: 18px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacja */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .opinia:hover {
@@ -287,7 +289,7 @@ nav ul li a i {
     margin-bottom: 18px;
     font-size: 1.08rem;
     color: #444;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacja */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .faq-item:hover {
@@ -297,43 +299,7 @@ nav ul li a i {
 
 .faq-item strong {
     color: var(--accent-dark);
-    display: block;
-    margin-bottom: 6px;
-}
-
-/* --- KONTAKT --- */
-#kontakt {
-    text-align: center;
-}
-
-#kontakt h2 {
-    color: var(--accent-dark);
-    margin-bottom: 12px;
-}
-
-#kontakt a {
-    color: var(--accent);
-    text-decoration: none;
     font-weight: 600;
-}
-
-#kontakt a:hover {
-    color: var(--accent-dark);
-    text-decoration: underline;
-}
-
-/* --- FOOTER --- */
-footer {
-    background: var(--main-gradient);
-    color: #fff;
-    text-align: center;
-    padding: 22px 0 18px;
-    margin-top: 40px;
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
-    font-size: 1.08rem;
-    letter-spacing: 0.5px;
-    box-shadow: var(--shadow);
 }
 
 /* --- RESPONSYWNOŚĆ --- */
@@ -345,6 +311,10 @@ footer {
         padding: 18px 3vw 12px 3vw;
     }
 
+    header .logo {
+        max-width: 180px;
+    }
+
     nav {
         width: 100%;
         justify-content: flex-start;
@@ -352,11 +322,6 @@ footer {
 
     nav ul {
         gap: 18px;
-    }
-
-    .section {
-        padding-left: 3vw;
-        padding-right: 3vw;
     }
 
     .product-hero {
@@ -382,6 +347,10 @@ footer {
         align-items: stretch;
         padding: 12px 2vw 8px 2vw;
         gap: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 1.8rem;
     }
 
     nav ul {
