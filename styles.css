@@ -7,12 +7,6 @@
     --radius: 18px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Poppins', 'Montserrat', sans-serif;
     background: var(--bg-light);
@@ -20,11 +14,12 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     padding-top: 110px;
+    margin: 0;
 }
 
 header {
     background: #fff;
-    padding: 16px 5%;
+    padding: 16px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +33,8 @@ header {
     border-bottom-right-radius: var(--radius);
     animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1) forwards;
     opacity: 0;
+    gap: 30px;
+    box-sizing: border-box;
 }
 
 @keyframes fadeIn {
@@ -50,65 +47,80 @@ header .logo {
     min-width: 120px;
     max-width: 220px;
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
 
 header .logo h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: var(--accent-dark);
     letter-spacing: 1px;
     margin-bottom: 6px;
+    transition: font-size 0.3s ease;
 }
 
 header .logo p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #888;
     margin-top: 0;
 }
 
-header .logo:hover {
-    transform: scale(1.02);
+header .logo h1:hover {
+    transform: scale(1.1);
 }
 
 nav {
-    flex: 2;
+    flex: 2 1 400px;
     display: flex;
     justify-content: flex-end;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    padding-right: 10px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #222;
     font-weight: 600;
-    padding: 8px 16px;
+    padding: 10px 18px;
     border-radius: 8px;
     transition: background 0.3s, color 0.3s, transform 0.2s;
-    font-size: 1rem;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
 }
 
 nav ul li a:hover {
     background: var(--main-gradient);
     color: var(--accent-dark);
-    transform: scale(1.05);
+    transform: scale(1.08);
     box-shadow: 0 2px 12px rgba(255, 64, 129, 0.08);
 }
 
 nav ul li a i {
     color: var(--accent);
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 /* --- SEKCJE --- */
@@ -117,9 +129,10 @@ nav ul li a i {
     transform: translateY(40px) scale(0.98);
     transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
     will-change: opacity, transform;
-    margin: 30px auto 40px;
-    padding: 0 5%;
-    max-width: 1200px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .section.visible {
@@ -130,46 +143,53 @@ nav ul li a i {
 /* --- HERO PRODUKTU --- */
 .product-hero {
     display: flex;
-    gap: 40px;
+    gap: 48px;
     align-items: center;
     justify-content: center;
     background: #fff;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 40px 30px;
-    margin: 0 auto 40px;
+    padding: 48px 32px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
     flex-wrap: wrap;
 }
 
 .product-img img {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
+    width: 340px;
+    height: 440px;
+    object-fit: cover;
     border-radius: var(--radius);
     box-shadow: 0 4px 18px rgba(255, 64, 129, 0.10);
+    background: #f6f6f6;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-img img:hover {
+    transform: scale(1.05);
 }
 
 .product-info {
-    max-width: 500px;
-    min-width: 0;
-    flex: 1;
+    max-width: 420px;
+    min-width: 260px;
 }
 
 .product-info h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: var(--accent-dark);
     margin-bottom: 16px;
 }
 
 .product-desc {
-    font-size: 1.1rem;
+    font-size: 1.18rem;
     color: #444;
     margin-bottom: 18px;
     line-height: 1.6;
 }
 
 .product-price {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     color: var(--accent-dark);
     font-weight: 700;
     margin-bottom: 18px;
@@ -180,15 +200,13 @@ nav ul li a i {
     color: #fff;
     border: none;
     border-radius: 12px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    padding: 14px 32px;
+    padding: 16px 38px;
     margin-bottom: 18px;
     cursor: pointer;
     box-shadow: 0 2px 12px rgba(255, 64, 129, 0.10);
     transition: background 0.3s, transform 0.2s;
-    width: 100%;
-    max-width: 300px;
 }
 
 .buy-btn:hover {
@@ -205,7 +223,7 @@ nav ul li a i {
 
 .product-features li {
     color: #444;
-    font-size: 1rem;
+    font-size: 1.08rem;
     margin-bottom: 8px;
     display: flex;
     align-items: center;
@@ -221,12 +239,11 @@ nav ul li a i {
     text-align: center;
     color: var(--accent-dark);
     margin-bottom: 28px;
-    font-size: 1.8rem;
 }
 
 .opinie-list {
     display: flex;
-    gap: 25px;
+    gap: 32px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -235,18 +252,16 @@ nav ul li a i {
     background: #fff;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 25px 20px;
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    font-size: 1rem;
+    padding: 28px 22px;
+    max-width: 320px;
+    font-size: 1.08rem;
     color: #444;
     margin-bottom: 18px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .opinia:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12);
 }
 
@@ -255,7 +270,7 @@ nav ul li a i {
     margin-top: 12px;
     color: var(--accent-dark);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* --- FAQ --- */
@@ -263,7 +278,6 @@ nav ul li a i {
     text-align: center;
     color: var(--accent-dark);
     margin-bottom: 28px;
-    font-size: 1.8rem;
 }
 
 .faq-list {
@@ -275,15 +289,15 @@ nav ul li a i {
     background: #fff;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 20px 18px;
+    padding: 22px 18px;
     margin-bottom: 18px;
-    font-size: 1rem;
+    font-size: 1.08rem;
     color: #444;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .faq-item:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12);
 }
 
@@ -301,7 +315,6 @@ nav ul li a i {
 #kontakt h2 {
     color: var(--accent-dark);
     margin-bottom: 12px;
-    font-size: 1.8rem;
 }
 
 #kontakt a {
@@ -320,89 +333,118 @@ footer {
     background: var(--main-gradient);
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 22px 0 18px;
     margin-top: 40px;
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
-    font-size: 1rem;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
     box-shadow: var(--shadow);
 }
 
 /* --- RESPONSYWNOŚĆ --- */
-@media (max-width: 768px) {
-    body {
-        padding-top: 140px;
-    }
-
+@media (max-width: 1100px) {
     header {
         flex-direction: column;
-        gap: 15px;
-        padding: 15px 5%;
+        align-items: stretch;
+        gap: 10px;
+        padding: 18px 3vw 12px 3vw;
     }
 
     header .logo {
-        text-align: center;
-        margin: 0 auto;
+        max-width: 180px;
     }
 
     nav {
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     nav ul {
-        gap: 10px;
-        justify-content: center;
+        gap: 18px;
     }
 
     .product-hero {
         flex-direction: column;
-        gap: 30px;
-        padding: 30px 5%;
+        gap: 24px;
+        padding: 32px 8vw;
     }
 
-    .product-info h2 {
-        font-size: 1.6rem;
-    }
-
-    .buy-btn {
-        max-width: 100%;
+    .product-img img {
+        width: 90vw;
+        max-width: 400px;
+        height: auto;
     }
 }
 
-@media (max-width: 480px) {
+/* Dla ekranów o szerokości do 700px */
+@media (max-width: 700px) {
     body {
-        padding-top: 160px;
+        padding-top: 100px; /* ZMIENIONE z 140px na 100px */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 2vw 6px 2vw; /* ZMIENIONE - mniejszy padding */
+        gap: 8px; /* ZMIENIONE - mniejszy gap */
     }
 
     header .logo h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem; /* ZMIENIONE z 1.8rem na 1.4rem */
+    }
+
+    header .logo p {
+        font-size: 0.9rem; /* DODANE - mniejszy tekst */
     }
 
     nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
+        flex-direction: row; /* ZMIENIONE z column na row */
+        gap: 8px; /* ZMIENIONE - mniejszy gap */
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     nav ul li a {
-        justify-content: center;
+        padding: 6px 10px; /* ZMIENIONE - mniejsze paddingi */
+        font-size: 0.9rem; /* ZMIENIONE - mniejsza czcionka */
     }
 
-    .section {
-        margin: 20px auto 30px;
-        padding: 0 3%;
+    /* ... reszta bez zmian */
+}
+
+/* Dla ekranów o szerokości do 480px */
+@media (max-width: 480px) {
+    body {
+        padding-top: 120px; /* ZMIENIONE z 170px na 120px */
     }
 
-    .opinie-list {
-        gap: 15px;
+    header .logo h1 {
+        font-size: 1.2rem; /* ZMIENIONE z 1.3rem na 1.2rem */
     }
 
-    .opinia {
-        min-width: 100%;
+    header .logo p {
+        font-size: 0.8rem; /* DODANE - jeszcze mniejszy tekst */
     }
+
+    nav ul {
+        gap: 5px; /* ZMIENIONE - jeszcze mniejszy gap */
+    }
+
+    nav ul li a {
+        padding: 5px 8px; /* ZMIENIONE - jeszcze mniejsze paddingi */
+        font-size: 0.85rem; /* ZMIENIONE - jeszcze mniejsza czcionka */
+    }
+
+    /* ... reszta bez zmian */
+
+/* Ukryj paski przewijania w nawigacji na małych ekranach */
+nav::-webkit-scrollbar {
+    display: none;
+}
+nav {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 }
