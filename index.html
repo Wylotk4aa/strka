@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt – Kup Teraz!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="images/product">
+            <h1>Produkt</h1>
+            <p>Odkryj wyjątkową wartość w jednej paczce!</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#product"><i class="fas fa-box"></i> Produkt</a></li>
+                <li><a href="#opinie"><i class="fas fa-star"></i> Opinie</a></li>
+                <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="#kontakt"><i class="fas fa-envelope"></i> Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEKCJA PRODUKTU -->
+        <section id="product" class="section visible">
+            <div class="product-hero">
+                <div class="product-img">
+                    <img src="images/produkt1.png" alt="Produkt">
+                </div>
+                <div class="product-info">
+                    <h2> Produkt</h2>
+                    <p class="product-desc">
+                        Poznaj mój kurs! <br>
+                        <strong>Produkt</strong> to rozwiązanie Twoich problemów – szybkie, skuteczne i w świetnej cenie.
+                    </p>
+                    <div class="product-price">
+                        <span>99 zł</span>
+                    </div>
+                    <button id="buy-btn" class="buy-btn">Kup teraz</button>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> Najwyższa jakość</li>
+                        <li><i class="fas fa-check"></i> Szybka wysyłka</li>
+                        <li><i class="fas fa-check"></i> 30 dni na zwrot</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPINIE -->
+        <section id="opinie" class="section visible">
+            <h2>Opinie klientów</h2>
+            <div class="opinie-list">
+                <div class="opinia">
+                    <p>„Najlepszy zakup w tym roku! Polecam każdemu.”</p>
+                    <span>– Anna</span>
+                </div>
+                <div class="opinia">
+                    <p>„Produkt spełnił wszystkie moje oczekiwania. Szybka dostawa!”</p>
+                    <span>– Michał</span>
+                </div>
+                <div class="opinia">
+                    <p>„Obsługa klienta na najwyższym poziomie. Na pewno wrócę!”</p>
+                    <span>– Kasia</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section visible">
+            <h2>Najczęściej zadawane pytania</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <strong>Jak długo trwa dostawa?</strong>
+                    <p>Zamówienia wysyłamy w ciągu 24h, dostawa zwykle 1-2 dni robocze.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Czy mogę zwrócić produkt?</strong>
+                    <p>Tak, masz 30 dni na zwrot bez podania przyczyny.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Jak mogę zapłacić?</strong>
+                    <p>Bezpiecznie przez Stripe – kartą lub BLIK.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAKT -->
+        <section id="kontakt" class="section visible">
+            <h2>Masz pytania?</h2>
+            <p>Napisz do nas: <a href="mailto:kontakt@superprodukt.pl">kontakt@superprodukt.pl</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Super Produkt – Wszystkie prawa zastrzeżone</p>
+    </footer>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="stripe.js"></script>
+    <script>
+        document.getElementById('buy-btn').onclick = function() {
+            var stripe = Stripe('TWOJSTRIPE');
+            stripe.redirectToCheckout({
+                lineItems: [{price: '99 zł', quantity: 1}],
+                mode: 'payment',
+                successUrl: window.location.href + '?success=true',
+                cancelUrl: window.location.href + '?canceled=true',
+            });
+        };
+
+        // Animacja pojawiania się sekcji przy scrollowaniu
+        const sections = document.querySelectorAll('.section');
+
+        function checkVisibility() {
+            const triggerBottom = window.innerHeight / 1.2;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        }
+
+        window.addEventListener('load', checkVisibility);
+        window.addEventListener('scroll', checkVisibility);
+    </script>
+</body>
+</html>
