@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkt – Kup Teraz!</title>
+    <title>Kurs – Wybierz Swój Pakiet!</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- Dodaj Stripe.js -->
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>Produkt</h1>
+            <h1>MasterClass</h1>
             <p>Odkryj wyjątkową wartość w jednej paczce!</p>
         </div>
         <nav>
             <ul>
-                <li><a href="#product"><i class="fas fa-box"></i> Produkt</a></li>
+                <li><a href="#hero"><i class="fas fa-home"></i> Start</a></li>
+                <li><a href="#oferty"><i class="fas fa-box"></i> Oferty</a></li>
                 <li><a href="#opinie"><i class="fas fa-star"></i> Opinie</a></li>
                 <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
                 <li><a href="#kontakt"><i class="fas fa-envelope"></i> Kontakt</a></li>
@@ -27,85 +27,159 @@
     </header>
 
     <main>
-        <!-- SEKCJA PRODUKTU -->
-        <section id="product" class="section">
-            <div class="product-hero">
-                <div class="product-img">
-                    <img src="images/produkt1.png" alt="Produkt Premium">
+        <!-- HERO SECTION NA SRODKU -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-content">
+                <h1>Transformuj Swoje Umiejętności</h1>
+                <p class="hero-subtitle">Profesjonalny kurs, który zmieni sposób w jaki podchodzisz do rozwoju</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Zadowolonych uczniów</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-label">Wskaźnik sukcesu</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">4.9/5</span>
+                        <span class="stat-label">Ocena kursantów</span>
+                    </div>
                 </div>
-                <div class="product-info">
-                    <h2>Produkt Premium</h2>
-                    <p class="product-desc">
-                        Poznaj mój kurs! <br>
-                        <strong>Produkt Premium</strong> to rozwiązanie Twoich problemów – szybkie, skuteczne i w świetnej cenie.
-                    </p>
-                    <div class="product-price">99 zł</div>
-                    <button id="buy-btn" class="buy-btn">Kup teraz</button>
-                    <ul class="product-features">
-                        <li><i class="fas fa-check"></i> Najwyższa jakość</li>
-                        <li><i class="fas fa-check"></i> Szybka wysyłka</li>
-                        <li><i class="fas fa-check"></i> 30 dni na zwrot</li>
+                <a href="#oferty" class="cta-button">
+                    <i class="fas fa-arrow-down"></i>
+                    Zobacz Oferty
+                </a>
+            </div>
+        </section>
+
+        <!-- OFERTY NA SRODKU STRONY -->
+        <section id="oferty" class="section">
+            <div class="section-header">
+                <h2>Wybierz Idealny Pakiet Dla Siebie</h2>
+                <p>Trzy poziomy dostępu - od podstaw do mistrzostwa</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- PAKIET PODSTAWOWY -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Podstawowy</h3>
+                        <div class="price">97 zł</div>
+                        <p>Idealny na start</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Pełny dostęp do kursu wideo</li>
+                        <li><i class="fas fa-check"></i> Materiały PDF do pobrania</li>
+                        <li><i class="fas fa-check"></i> 30 dni wsparcia mailowego</li>
+                        <li><i class="fas fa-times"></i> Grupa VIP na Facebook</li>
+                        <li><i class="fas fa-times"></i> Konsultacje 1:1</li>
+                        <li><i class="fas fa-times"></i> Personalizowany plan</li>
                     </ul>
+                    <button class="buy-btn" data-plan="basic">Wybieram Pakiet</button>
                 </div>
+
+                <!-- PAKIET PREMIUM (NAJPOPULARNIEJSZY) -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">NAJPOPULARNIEJSZE</div>
+                    <div class="card-header">
+                        <h3>Premium</h3>
+                        <div class="price">197 zł</div>
+                        <p>Najlepszy stosunek jakości do ceny</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Wszystko z Pakietu Podstawowego</li>
+                        <li><i class="fas fa-check"></i> Grupa VIP na Facebook</li>
+                        <li><i class="fas fa-check"></i> 3 miesiące wsparcia</li>
+                        <li><i class="fas fa-check"></i> Dodatkowe materiały premium</li>
+                        <li><i class="fas fa-check"></i> Q&A live co tydzień</li>
+                        <li><i class="fas fa-times"></i> Konsultacje 1:1</li>
+                    </ul>
+                    <button class="buy-btn popular-btn" data-plan="premium">Wybieram Pakiet</button>
+                </div>
+
+                <!-- PAKIET VIP -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>VIP</h3>
+                        <div class="price">397 zł</div>
+                        <p>Kompleksowe rozwiązanie</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Wszystko z Pakietu Premium</li>
+                        <li><i class="fas fa-check"></i> 2 konsultacje 1:1 (60 min)</li>
+                        <li><i class="fas fa-check"></i> Personalizowany plan działania</li>
+                        <li><i class="fas fa-check"></i> Dożywotni dostęp do kursu</li>
+                        <li><i class="fas fa-check"></i> Priorytetowe wsparcie</li>
+                        <li><i class="fas fa-check"></i> Certyfikat ukończenia</li>
+                    </ul>
+                    <button class="buy-btn" data-plan="vip">Wybieram Pakiet</button>
+                </div>
+            </div>
+
+            <div class="guarantee">
+                <i class="fas fa-shield-alt"></i>
+                <p><strong>Gwarancja satysfakcji:</strong> 30 dni na zwrot bez podawania przyczyny</p>
             </div>
         </section>
 
         <!-- OPINIE -->
         <section id="opinie" class="section">
-            <h2>Opinie klientów</h2>
+            <h2>Co Mówią Nasi Klienci</h2>
             <div class="opinie-list">
                 <div class="opinia">
-                    <p>„Najlepszy zakup w tym roku! Polecam każdemu.”</p>
-                    <span>– Anna</span>
+                    <div class="stars">★★★★★</div>
+                    <p>„Pakiet Premium zmienił wszystko! Wreszcie zrozumiałem o co chodzi.”</p>
+                    <span>– Anna, Warszawa</span>
                 </div>
                 <div class="opinia">
-                    <p>„Produkt spełnił wszystkie moje oczekiwania. Szybka dostawa!”</p>
-                    <span>– Michał</span>
+                    <div class="stars">★★★★★</div>
+                    <p>„Konsultacje VIP były warte każdej złotówki. Oszczędziły mi miesięcy prób i błędów.”</p>
+                    <span>– Michał, Kraków</span>
                 </div>
                 <div class="opinia">
-                    <p>„Obsługa klienta na najwyższym poziomie. Na pewno wrócę!”</p>
-                    <span>– Kasia</span>
+                    <div class="stars">★★★★★</div>
+                    <p>„Grupa na Facebooku to złoto! Wsparcie społeczności jest bezcenne.”</p>
+                    <span>– Kasia, Wrocław</span>
                 </div>
             </div>
         </section>
 
         <!-- FAQ -->
         <section id="faq" class="section">
-            <h2>Najczęściej zadawane pytania</h2>
+            <h2>Najczęściej Zadawane Pytania</h2>
             <div class="faq-list">
                 <div class="faq-item">
-                    <strong>Jak długo trwa dostawa?</strong>
-                    <p>Zamówienia wysyłamy w ciągu 24h, dostawa zwykle 1-2 dni robocze.</p>
+                    <strong>Kiedy otrzymam dostęp do kursu?</strong>
+                    <p>Dostęp otrzymasz natychmiast po zaksięgowaniu płatności.</p>
                 </div>
                 <div class="faq-item">
-                    <strong>Czy mogę zwrócić produkt?</strong>
-                    <p>Tak, masz 30 dni na zwrot bez podania przyczyny.</p>
+                    <strong>Czy mogę zmienić pakiet później?</strong>
+                    <p>Tak, możesz upgrade'ować swój pakiet w dowolnym momencie, dopłacając różnicę.</p>
                 </div>
                 <div class="faq-item">
-                    <strong>Jak mogę zapłacić?</strong>
-                    <p>Bezpiecznie przez Stripe – kartą lub BLIK.</p>
+                    <strong>Jak długo trwają konsultacje VIP?</strong>
+                    <p>Każda konsultacja trwa 60 minut i umawiamy się na dogodny termin.</p>
                 </div>
             </div>
         </section>
 
         <!-- KONTAKT -->
         <section id="kontakt" class="section">
-            <h2>Masz pytania?</h2>
-            <p>Napisz do nas: <a href="mailto:kontakt@superprodukt.pl">kontakt@superprodukt.pl</a></p>
+            <h2>Masz Pytania?</h2>
+            <p>Napisz do nas: <a href="mailto:kontakt@masterclass.pl">kontakt@masterclass.pl</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Super Produkt – Wszystkie prawa zastrzeżone</p>
+        <p>&copy; 2025 MasterClass – Wszystkie prawa zastrzeżone</p>
     </footer>
 
-    <!-- Podpięcie stripe.js -->
     <script src="stripe.js"></script>
     
     <script>
         // Animacja pojawiania się sekcji przy scrollowaniu
         const sections = document.querySelectorAll('.section');
-
         function checkVisibility() {
             const triggerBottom = window.innerHeight / 1.2;
             sections.forEach(section => {
