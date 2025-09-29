@@ -34,7 +34,7 @@ header {
     animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1) forwards;
     opacity: 0;
     gap: 30px;
-    box-sizing: border-box; /* Ensure padding does not affect width */
+    box-sizing: border-box;
 }
 
 @keyframes fadeIn {
@@ -375,7 +375,7 @@ footer {
     .product-img img {
         width: 90vw;
         max-width: 400px;
-        height: auto; /* Umożliwia skalowanie proporcjonalne */
+        height: auto;
     }
 }
 
@@ -417,7 +417,7 @@ footer {
     .product-img img {
         width: 98vw;
         max-width: 320px;
-        height: auto; /* Umożliwia skalowanie proporcjonalne */
+        height: auto;
     }
 
     .opinie-list {
@@ -445,9 +445,10 @@ footer {
     .product-img img {
         width: 98vw;
         max-width: 220px;
-        height: auto; /* Umożliwia skalowanie proporcjonalne */
+        height: auto;
     }
 }
+
 /* Ukryj paski przewijania w nawigacji na małych ekranach */
 nav::-webkit-scrollbar {
     display: none;
