@@ -7,6 +7,12 @@
     --radius: 18px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', 'Montserrat', sans-serif;
     background: var(--bg-light);
@@ -14,7 +20,6 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     padding-top: 110px;
-    margin: 0;
 }
 
 header {
@@ -33,8 +38,6 @@ header {
     border-bottom-right-radius: var(--radius);
     animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1) forwards;
     opacity: 0;
-    gap: 20px;
-    box-sizing: border-box;
 }
 
 @keyframes fadeIn {
@@ -47,7 +50,6 @@ header .logo {
     min-width: 120px;
     max-width: 220px;
     transition: transform 0.3s ease;
-    box-sizing: border-box;
 }
 
 header .logo h1 {
@@ -56,7 +58,6 @@ header .logo h1 {
     color: var(--accent-dark);
     letter-spacing: 1px;
     margin-bottom: 6px;
-    transition: font-size 0.3s ease;
 }
 
 header .logo p {
@@ -65,16 +66,14 @@ header .logo p {
     margin-top: 0;
 }
 
-header .logo h1:hover {
-    transform: scale(1.1);
+header .logo:hover {
+    transform: scale(1.02);
 }
 
 nav {
     flex: 2;
     display: flex;
     justify-content: flex-end;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 nav ul {
@@ -85,12 +84,6 @@ nav ul {
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-nav ul li {
-    margin: 0;
-    padding: 0;
 }
 
 nav ul li a {
@@ -101,7 +94,6 @@ nav ul li a {
     border-radius: 8px;
     transition: background 0.3s, color 0.3s, transform 0.2s;
     font-size: 1rem;
-    letter-spacing: 0.5px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -110,7 +102,7 @@ nav ul li a {
 nav ul li a:hover {
     background: var(--main-gradient);
     color: var(--accent-dark);
-    transform: scale(1.08);
+    transform: scale(1.05);
     box-shadow: 0 2px 12px rgba(255, 64, 129, 0.08);
 }
 
@@ -153,16 +145,8 @@ nav ul li a i {
     width: 100%;
     max-width: 340px;
     height: auto;
-    object-fit: cover;
     border-radius: var(--radius);
     box-shadow: 0 4px 18px rgba(255, 64, 129, 0.10);
-    background: #f6f6f6;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.product-img img:hover {
-    transform: scale(1.05);
 }
 
 .product-info {
@@ -262,7 +246,7 @@ nav ul li a i {
 }
 
 .opinia:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12);
 }
 
@@ -299,7 +283,7 @@ nav ul li a i {
 }
 
 .faq-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 6px 24px rgba(255, 64, 129, 0.12);
 }
 
@@ -341,27 +325,22 @@ footer {
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
     font-size: 1rem;
-    letter-spacing: 0.5px;
     box-shadow: var(--shadow);
 }
 
 /* --- RESPONSYWNOŚĆ --- */
-
-/* Dla ekranów o szerokości do 1100px */
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 140px;
     }
-    
+
     header {
         flex-direction: column;
-        align-items: stretch;
         gap: 15px;
         padding: 15px 5%;
     }
 
     header .logo {
-        max-width: 180px;
         text-align: center;
         margin: 0 auto;
     }
@@ -372,7 +351,7 @@ footer {
     }
 
     nav ul {
-        gap: 15px;
+        gap: 10px;
         justify-content: center;
     }
 
@@ -381,88 +360,27 @@ footer {
         gap: 30px;
         padding: 30px 5%;
     }
-}
-
-/* Dla ekranów o szerokości do 768px */
-@media (max-width: 768px) {
-    body {
-        padding-top: 140px;
-    }
-
-    header {
-        padding: 12px 4%;
-    }
-
-    header .logo h1 {
-        font-size: 1.6rem;
-    }
-    
-    header .logo p {
-        font-size: 0.9rem;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-
-    nav ul li a {
-        padding: 6px 12px;
-        font-size: 0.9rem;
-    }
-
-    .section {
-        margin: 20px auto 30px;
-        padding: 0 4%;
-    }
-
-    .product-hero {
-        gap: 20px;
-        padding: 20px 4%;
-    }
 
     .product-info h2 {
         font-size: 1.6rem;
     }
 
-    .product-desc {
-        font-size: 1rem;
-    }
-
-    .product-price {
-        font-size: 1.6rem;
-    }
-
     .buy-btn {
-        font-size: 1rem;
-        padding: 12px 24px;
-    }
-
-    #opinie h2,
-    #faq h2,
-    #kontakt h2 {
-        font-size: 1.6rem;
+        max-width: 100%;
     }
 }
 
-/* Dla ekranów o szerokości do 480px */
 @media (max-width: 480px) {
     body {
-        padding-top: 150px;
-    }
-
-    header {
-        padding: 10px 3%;
-        gap: 10px;
+        padding-top: 160px;
     }
 
     header .logo h1 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 8px;
-        align-items: center;
         width: 100%;
     }
 
@@ -473,29 +391,11 @@ footer {
 
     nav ul li a {
         justify-content: center;
-        padding: 10px;
     }
 
     .section {
-        margin: 15px auto 25px;
+        margin: 20px auto 30px;
         padding: 0 3%;
-    }
-
-    .product-hero {
-        padding: 15px 3%;
-    }
-
-    .product-info h2 {
-        font-size: 1.4rem;
-    }
-
-    .product-price {
-        font-size: 1.4rem;
-    }
-
-    .buy-btn {
-        font-size: 0.9rem;
-        padding: 10px 20px;
     }
 
     .opinie-list {
@@ -504,42 +404,5 @@ footer {
 
     .opinia {
         min-width: 100%;
-        padding: 20px 15px;
     }
-
-    #opinie h2,
-    #faq h2,
-    #kontakt h2 {
-        font-size: 1.4rem;
-    }
-}
-
-/* Dla bardzo małych ekranów (do 360px) */
-@media (max-width: 360px) {
-    body {
-        padding-top: 160px;
-    }
-    
-    header .logo h1 {
-        font-size: 1.2rem;
-    }
-    
-    .product-info h2 {
-        font-size: 1.2rem;
-    }
-    
-    .product-price {
-        font-size: 1.2rem;
-    }
-    
-    #opinie h2,
-    #faq h2,
-    #kontakt h2 {
-        font-size: 1.2rem;
-    }
-}
-
-/* Ukryj paski przewijania w nawigacji */
-nav::-webkit-scrollbar {
-    display: none;
 }
