@@ -44,7 +44,7 @@ header {
 }
 
 header .logo {
-    flex: 1 1 220px;
+    flex: 1 1 150px;
     min-width: 120px;
     max-width: 220px;
     transition: transform 0.3s ease;
@@ -53,7 +53,7 @@ header .logo {
 
 header .logo h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     color: var(--accent-dark);
     letter-spacing: 1px;
     margin-bottom: 6px;
@@ -61,7 +61,7 @@ header .logo h1 {
 }
 
 header .logo p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #888;
     margin-top: 0;
 }
@@ -348,7 +348,7 @@ footer {
 @media (max-width: 1100px) {
     header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         gap: 10px;
         padding: 18px 3vw 12px 3vw;
     }
@@ -359,7 +359,7 @@ footer {
 
     nav {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     nav ul {
@@ -386,19 +386,19 @@ footer {
 
     header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         padding: 12px 2vw 8px 2vw;
         gap: 10px;
     }
 
     header .logo h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     nav ul {
         flex-direction: column;
         gap: 10px;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .section {
