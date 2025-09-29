@@ -377,74 +377,75 @@ footer {
     }
 }
 
-/* Dla ekranów o szerokości do 700px */
 @media (max-width: 700px) {
     body {
-        padding-top: 100px; /* ZMIENIONE z 140px na 100px */
+        padding-top: 140px;
     }
 
     header {
         flex-direction: column;
         align-items: stretch;
-        padding: 8px 2vw 6px 2vw; /* ZMIENIONE - mniejszy padding */
-        gap: 8px; /* ZMIENIONE - mniejszy gap */
+        padding: 12px 2vw 8px 2vw;
+        gap: 10px;
     }
 
     header .logo h1 {
-        font-size: 1.4rem; /* ZMIENIONE z 1.8rem na 1.4rem */
-    }
-
-    header .logo p {
-        font-size: 0.9rem; /* DODANE - mniejszy tekst */
+        font-size: 1.8rem;
     }
 
     nav ul {
-        flex-direction: row; /* ZMIENIONE z column na row */
-        gap: 8px; /* ZMIENIONE - mniejszy gap */
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
     }
 
-    nav ul li a {
-        padding: 6px 10px; /* ZMIENIONE - mniejsze paddingi */
-        font-size: 0.9rem; /* ZMIENIONE - mniejsza czcionka */
+    .section {
+        margin-top: 40px;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 
-    /* ... reszta bez zmian */
+    .product-hero {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 2vw;
+    }
+
+    .product-img img {
+        width: 98vw;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .opinie-list {
+        gap: 10px;
+    }
 }
 
-/* Dla ekranów o szerokości do 480px */
 @media (max-width: 480px) {
     body {
-        padding-top: 120px; /* ZMIENIONE z 170px na 120px */
+        padding-top: 170px;
     }
 
     header .logo h1 {
-        font-size: 1.2rem; /* ZMIENIONE z 1.3rem na 1.2rem */
+        font-size: 1.3rem;
     }
 
-    header .logo p {
-        font-size: 0.8rem; /* DODANE - jeszcze mniejszy tekst */
+    .section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
 
-    nav ul {
-        gap: 5px; /* ZMIENIONE - jeszcze mniejszy gap */
+    .product-img img {
+        width: 98vw;
+        max-width: 220px;
+        height: auto;
     }
-
-    nav ul li a {
-        padding: 5px 8px; /* ZMIENIONE - jeszcze mniejsze paddingi */
-        font-size: 0.85rem; /* ZMIENIONE - jeszcze mniejsza czcionka */
-    }
-
-    /* ... reszta bez zmian */
+}
 
 /* Ukryj paski przewijania w nawigacji na małych ekranach */
 nav::-webkit-scrollbar {
     display: none;
-}
-nav {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
 }
