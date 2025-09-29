@@ -35,6 +35,7 @@ header {
     opacity: 0;
     gap: 30px;
     box-sizing: border-box; /* Ensure padding does not affect width */
+    flex-wrap: wrap; /* Allow wrapping of header items */
 }
 
 @keyframes fadeIn {
@@ -43,7 +44,7 @@ header {
 }
 
 header .logo {
-    flex: 1;
+    flex: 1 1 220px;
     min-width: 120px;
     max-width: 220px;
     transition: transform 0.3s ease;
@@ -77,6 +78,7 @@ nav {
     box-sizing: border-box;
     overflow-x: auto;
     padding-right: 10px; /* Prevent overflow on small screens */
+    flex-wrap: wrap; /* Allow wrapping of navigation items */
 }
 
 nav ul {
