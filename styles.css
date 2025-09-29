@@ -356,7 +356,7 @@ footer {
     }
 
     header .logo h1 {
-        font-size: 1.4rem; /* ZMIENIONE z 1.8rem na 1.4rem */
+        font-size: 1.2rem; /* ZMIENIONE z 1.8rem na 1.4rem */
     }
 
     header .logo p {
@@ -382,11 +382,11 @@ footer {
 /* Dla ekranów o szerokości do 480px */
 @media (max-width: 480px) {
     body {
-        padding-top: 120px; /* ZMIENIONE z 170px na 120px */
+        padding-top: 90px; /* ZMIENIONE z 170px na 120px */
     }
 
     header .logo h1 {
-        font-size: 1.2rem; /* ZMIENIONE z 1.3rem na 1.2rem */
+        font-size: 1.1rem; /* ZMIENIONE z 1.3rem na 1.2rem */
     }
 
     header .logo p {
@@ -404,4 +404,5 @@ footer {
 
     /* ... reszta bez zmian */
 }
+
 
