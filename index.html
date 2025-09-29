@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Dodaj Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <header>
@@ -29,7 +31,7 @@
         <section id="product" class="section">
             <div class="product-hero">
                 <div class="product-img">
-                    <img src="produkt1.png" alt="Produkt Premium">
+                    <img src="images/produkt1.png" alt="Produkt Premium">
                 </div>
                 <div class="product-info">
                     <h2>Produkt Premium</h2>
@@ -97,6 +99,9 @@
         <p>&copy; 2025 Super Produkt – Wszystkie prawa zastrzeżone</p>
     </footer>
 
+    <!-- Podpięcie stripe.js -->
+    <script src="stripe.js"></script>
+    
     <script>
         // Animacja pojawiania się sekcji przy scrollowaniu
         const sections = document.querySelectorAll('.section');
@@ -110,14 +115,6 @@
                 }
             });
         }
-
-        // Obsługa przycisku kup teraz
-        document.getElementById('buy-btn').addEventListener('click', function() {
-            alert('Dziękujemy za zainteresowanie! Płatność będzie dostępna wkrótce.');
-            // Tutaj możesz dodać integrację z Stripe
-            // var stripe = Stripe('TWÓJ_KLUCZ_STRIPE');
-            // stripe.redirectToCheckout({...});
-        });
 
         // Smooth scroll dla linków w nawigacji
         document.querySelectorAll('nav a').forEach(anchor => {
@@ -137,4 +134,3 @@
     </script>
 </body>
 </html>
-
