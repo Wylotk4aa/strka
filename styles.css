@@ -1,10 +1,9 @@
 :root {
-    /* PALETA KOLORYSTYCZNA SENSIKO */
-    --pearl-white: #faf8f5;    /* Perłowa biel - czystość, minimalizm */
-    --sand: #d7c4b7;          /* Jasny beż - czułość, kobiecość */
-    --taupe: #9e8f86;         /* Beż z nutką szarości - energia, odwaga */
-    --chocolate: #332521;     /* Czekoladowy brąz - kreatywność, radość */
-    --noir: #0f0c0b;          /* Złamana czerń - minimalizm, nowoczesność */
+    --pearl-white: #faf8f5;    
+    --sand: #d7c4b7;        
+    --taupe: #9e8f86;         
+    --chocolate: #332521;     
+    --noir: #0f0c0b;         
     
     /* GRADIENTY I AKCENTY */
     --main-gradient: linear-gradient(135deg, var(--taupe) 0%, var(--sand) 100%);
