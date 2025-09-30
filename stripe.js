@@ -5,7 +5,7 @@ document.querySelectorAll('.buy-btn').forEach(button => {
         let stripeUrl = '';
         
         switch(plan) {
-            case 'basic':
+            case 'standard':
                 stripeUrl = 'https://buy.stripe.com/9AQeY3eaF2XZ34YcMU';
                 break;
             case 'premium':
