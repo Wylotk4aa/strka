@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Dostosowane do nowej wysokości headera
+                    top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
                 });
             }
@@ -63,36 +63,60 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
 
-    // OBSŁUGA SCROLLOWANIA HEADERA
+    // POPRAWIONA OBSŁUGA SCROLLOWANIA HEADERA
     let lastScrollY = window.scrollY;
     const header = document.querySelector('header');
-    const scrollThreshold = 100; // Po ilu pikselach scrollowania header znika
-
+    const scrollThreshold = 50; // Mniejszy próg
+    
+    // Funkcja do obsługi scrollowania z throttling
     function handleScroll() {
         const currentScrollY = window.scrollY;
         
+        // Debugowanie - możesz to później usunąć
+        console.log(`Scroll: ${currentScrollY}, Last: ${lastScrollY}, Threshold: ${scrollThreshold}`);
+        
         if (currentScrollY > scrollThreshold) {
             // Scroll w dół - ukryj header
-            if (currentScrollY > lastScrollY) {
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 header.classList.add('hidden');
                 header.classList.add('scrolled');
+                console.log('⬇️ Header ukryty');
             } 
-            // Scroll w górę - pokaż header (bardziej kompaktowy)
-            else {
+            // Scroll w górę - pokaż header
+            else if (currentScrollY < lastScrollY) {
                 header.classList.remove('hidden');
                 header.classList.add('scrolled');
+                console.log('⬆️ Header pokazany (scrolled)');
             }
         } else {
             // Na samej górze - pokaż normalny header
             header.classList.remove('hidden');
             header.classList.remove('scrolled');
+            console.log('🔝 Header normalny');
         }
         
         lastScrollY = currentScrollY;
     }
 
-    // Dodaj obsługę scrollowania
-    window.addEventListener('scroll', handleScroll);
+    // Throttle function dla lepszej wydajności
+    function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        }
+    }
+
+    // Dodaj obsługę scrollowania z throttling
+    window.addEventListener('scroll', throttle(handleScroll, 100));
+
+    // Inicjalizacja na starcie
+    handleScroll();
 
     window.addEventListener('load', checkVisibility);
     window.addEventListener('scroll', checkVisibility);
