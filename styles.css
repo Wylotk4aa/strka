@@ -39,16 +39,16 @@ body {
     color: var(--text-dark);
     min-height: 100vh;
     overflow-x: hidden;
-    padding-top: 80px;
+    padding-top: 70px; /* Zmniejszone z 80px */
     line-height: 1.7;
     font-weight: 300;
 }
 
-/* HEADER */
+/* HEADER - NOWY STYL */
 header {
     background: rgba(250, 248, 245, 0.98);
     backdrop-filter: blur(20px);
-    padding: 18px 5%;
+    padding: 12px 5%; /* Zmniejszone paddingi */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,43 +59,71 @@ header {
     z-index: 1000;
     box-shadow: var(--shadow);
     border-bottom: 1px solid rgba(215, 196, 183, 0.3);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+/* Header ukryty przy scrollowaniu w dół */
+header.hidden {
+    transform: translateY(-100%);
+}
+
+/* Header po scrollu w górę - bardziej kompaktowy */
+header.scrolled {
+    padding: 8px 5%; /* Jeszcze mniejsze paddingi */
+    box-shadow: 0 4px 20px rgba(51, 37, 33, 0.1);
 }
 
 header .logo h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Zmniejszone z 1.8rem */
     color: var(--chocolate);
     font-weight: 600;
     letter-spacing: -0.5px;
     font-family: 'Montserrat', sans-serif;
+    transition: font-size 0.3s ease;
+}
+
+header.scrolled .logo h1 {
+    font-size: 1.3rem; /* Jeszcze mniejsze po scrollu */
 }
 
 header .logo p {
-    font-size: 0.85rem;
+    font-size: 0.75rem; /* Zmniejszone z 0.85rem */
     color: var(--taupe);
     font-weight: 300;
     letter-spacing: 0.5px;
+    transition: font-size 0.3s ease;
+}
+
+header.scrolled .logo p {
+    font-size: 0.7rem; /* Jeszcze mniejsze po scrollu */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 10px; /* Zmniejszone z 15px */
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--chocolate);
     font-weight: 500;
-    padding: 10px 22px;
-    border-radius: 25px;
+    padding: 8px 18px; /* Zmniejszone z 10px 22px */
+    border-radius: 20px;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-    letter-spacing: 0.3px;
+    gap: 6px; /* Zmniejszone z 8px */
+    font-size: 0.85rem; /* Zmniejszone z 0.9rem */
+    letter-spacing: 0.2px;
     border: 1px solid transparent;
     font-family: 'Montserrat', sans-serif;
+}
+
+header.scrolled nav ul li a {
+    padding: 6px 15px; /* Jeszcze mniejsze po scrollu */
+    font-size: 0.8rem;
 }
 
 nav ul li a:hover {
@@ -106,15 +134,16 @@ nav ul li a:hover {
     border-color: var(--taupe);
 }
 
-/* HERO SECTION */
+/* HERO SECTION - dostosowane do mniejszego headera */
 .hero-section {
     background: linear-gradient(135deg, var(--chocolate) 0%, var(--taupe) 100%);
     color: white;
     text-align: center;
-    padding: 150px 5% 100px;
-    margin-top: -80px;
+    padding: 130px 5% 100px; /* Zmniejszone z 150px */
+    margin-top: -70px; /* Dostosowane do nowej wysokości headera */
 }
 
+/* Reszta kodu pozostaje bez zmian... */
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
