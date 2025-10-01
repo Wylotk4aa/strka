@@ -1,6 +1,5 @@
-// Główne funkcjonalności strony
+// scripts.js - GŁÓWNY PLIK
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Scripts.js loaded - main functionality');
     
     // Płynne przewijanie do sekcji
     document.querySelectorAll('nav a').forEach(anchor => {
@@ -18,13 +17,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Animacja pojawiania się sekcji
+    // FAQ accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+ 
+    faqQuestions.forEach((question, index) => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Zamknij wszystkie inne
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Otwórz aktualne jeśli było zamknięte
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        });
+    });
+
+    // Animacja sekcji
     const sections = document.querySelectorAll('.section');
     
     function checkVisibility() {
         const triggerBottom = window.innerHeight / 1.2;
         
-        sections.forEach(section => {
+        sections.forEach((section) => {
             const sectionTop = section.getBoundingClientRect().top;
             
             if (sectionTop < triggerBottom) {
@@ -41,10 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
 
-    // Sprawdź widoczność przy załadowaniu i przewijaniu
     window.addEventListener('load', checkVisibility);
     window.addEventListener('scroll', checkVisibility);
-    
-    // Sprawdź też od razu po załadowaniu DOM
     setTimeout(checkVisibility, 100);
+    
 });
