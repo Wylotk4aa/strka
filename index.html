@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrycja Trzaskawka - Fotografia</title>
+    <title>Patrycja Trzaskawka - Mistrzowski Kurs Fotografii</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -17,7 +17,9 @@
         <nav>
             <ul>
                 <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
-                <li><a href="#produkt"><i class="fas fa-star"></i> Produkt</a></li>
+                <li><a href="#kurs"><i class="fas fa-graduation-cap"></i> Kurs</a></li>
+                <li><a href="#opinie"><i class="fas fa-star"></i> Opinie</a></li>
+                <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
                 <li><a href="#omnie"><i class="fas fa-heart"></i> O mnie</a></li>
                 <li><a href="#kontakt"><i class="fas fa-envelope"></i> Kontakt</a></li>
             </ul>
@@ -25,6 +27,15 @@
     </header>
 
     <main>
+        <!-- HERO SECTION -->
+        <section class="section hero-section">
+            <div class="hero-content">
+                <h1>Odkryj Magię Fotografii</h1>
+                <p class="hero-subtitle">Naucz się tworzyć niezwykłe zdjęcia, które opowiadają prawdziwe historie</p>
+                <a href="#kurs" class="cta-button">Rozpocznij Przygodę</a>
+            </div>
+        </section>
+
         <!-- PORTFOLIO SECTION -->
         <section id="portfolio" class="section portfolio-section">
             <div class="section-header">
@@ -36,7 +47,7 @@
                 <!-- PROJECT 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="18.jpg" alt="Sesja ślubna" loading="lazy">
+                        <img src="images/18.jpg" alt="Sesja ślubna" loading="lazy">
                         <div class="project-overlay">
                             <button class="zoom-btn" data-image="images/18.jpg">
                                 <i class="fas fa-expand"></i>
@@ -56,7 +67,7 @@
                 <!-- PROJECT 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="7.jpg" alt="Sesja rodzinna" loading="lazy">
+                        <img src="images/7.jpg" alt="Sesja rodzinna" loading="lazy">
                         <div class="project-overlay">
                             <button class="zoom-btn" data-image="images/7.jpg">
                                 <i class="fas fa-expand"></i>
@@ -76,7 +87,7 @@
                 <!-- PROJECT 3 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="15.jpg" alt="Sesja biznesowa" loading="lazy">
+                        <img src="images/15.jpg" alt="Sesja biznesowa" loading="lazy">
                         <div class="project-overlay">
                             <button class="zoom-btn" data-image="images/15.jpg">
                                 <i class="fas fa-expand"></i>
@@ -96,7 +107,7 @@
                 <!-- PROJECT 4 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="13.jpg" alt="Sesja ciążowa" loading="lazy">
+                        <img src="images/13.jpg" alt="Sesja ciążowa" loading="lazy">
                         <div class="project-overlay">
                             <button class="zoom-btn" data-image="images/13.jpg">
                                 <i class="fas fa-expand"></i>
@@ -116,7 +127,7 @@
                 <!-- PROJECT 5 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="14.jpg" alt="Sesja narzeczeńska" loading="lazy">
+                        <img src="images/14.jpg" alt="Sesja narzeczeńska" loading="lazy">
                         <div class="project-overlay">
                             <button class="zoom-btn" data-image="images/14.jpg">
                                 <i class="fas fa-expand"></i>
@@ -136,7 +147,7 @@
                 <!-- PROJECT 6 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="8.jpg" alt="Sesja dziecięca" loading="lazy">
+                        <img src="images/8.jpg" alt="Sesja dziecięca" loading="lazy">
                         <div class="project-overlay">
                             <button class="zoom-btn" data-image="images/8.jpg">
                                 <i class="fas fa-expand"></i>
@@ -155,45 +166,211 @@
             </div>
         </section>
 
-        <!-- PRODUKT SECTION -->
-        <section id="produkt" class="section product-section">
-            <div class="product-container">
-                <div class="product-header">
-                    <h1>Produkt</h1>
-                    <p class="product-subtitle">Odkryj wyjątkową wartość w jednej poczce!</p>
+        <!-- KURS SECTION -->
+        <section id="kurs" class="section course-section">
+            <div class="course-container">
+                <div class="course-header">
+                    <h1>Mistrzowski Kurs Fotografii</h1>
+                    <p class="course-subtitle">Od amatora do profesjonalisty w 30 dni</p>
                 </div>
                 
-                <div class="product-content">
-                    <div class="product-info">
-                        <h2>Poznaj mój kurs!</h2>
-                        <p class="product-description">Produkt to rozwiązanie Twoich problemów – szybkie, skuteczne i w świetnej cenie.</p>
+                <div class="course-content">
+                    <div class="course-info">
+                        <h2>Zmierz się ze swoją kreatywnością!</h2>
+                        <p class="course-description">Ten kurs to kompleksowy przewodnik, który poprowadzi Cię przez każdy aspekt fotografii. Niezależnie od tego, czy dopiero zaczynasz, czy chcesz udoskonalić swoje umiejętności.</p>
                         
                         <div class="price-section">
-                            <div class="price">99 zł</div>
-                            <button class="buy-now-btn" id="buyCourse">Kup teraz</button>
+                            <div class="price">200 zł</div>
+                            <div class="old-price">429 zł</div>
+                            <button class="buy-now-btn" id="buyCourse">Zapisz się na kurs</button>
+                            <p class="price-note">Dostęp dożywotni + wszystkie przyszłe aktualizacje</p>
                         </div>
                         
                         <div class="features-grid">
                             <div class="feature-item">
-                                <i class="fas fa-medal"></i>
-                                <span>Najwyższą jakość</span>
+                                <i class="fas fa-play-circle"></i>
+                                <div>
+                                    <h4>15+ godzin lekcji wideo</h4>
+                                    <p>Szczegółowe tutoriale krok po kroku</p>
+                                </div>
                             </div>
                             <div class="feature-item">
-                                <i class="fas fa-shipping-fast"></i>
-                                <span>Szybka wysyłka</span>
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <h4>PDF z ćwiczeniami</h4>
+                                    <p>Praktyczne zadania do samodzielnego wykonania</p>
+                                </div>
                             </div>
                             <div class="feature-item">
-                                <i class="fas fa-undo-alt"></i>
-                                <span>30 dni na zwrot</span>
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Grupa wsparcia</h4>
+                                    <p>Dostęp do zamkniętej grupy na Facebooku</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-trophy"></i>
+                                <div>
+                                    <h4>Certyfikat ukończenia</h4>
+                                    <p>Oficjalny dokument potwierdzający zdobyte umiejętności</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="product-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-camera"></i>
-                            <p>Zdjęcie produktu</p>
+                    <div class="course-image">
+                        <div class="course-preview">
+                            <div class="preview-header">
+                                <h3>Co zawiera kurs?</h3>
+                            </div>
+                            <ul class="curriculum-list">
+                                <li><i class="fas fa-check"></i> Podstawy kompozycji i kadrowania</li>
+                                <li><i class="fas fa-check"></i> Mistrzostwo w pracy ze światłem</li>
+                                <li><i class="fas fa-check"></i> Zaawansowana obsługa aparatu</li>
+                                <li><i class="fas fa-check"></i> Obróbka zdjęć w Lightroom</li>
+                                <li><i class="fas fa-check"></i> Fotografia portretowa</li>
+                                <li><i class="fas fa-check"></i> Sesje plenerowe i studyjne</li>
+                                <li><i class="fas fa-check"></i> Praca z modelami</li>
+                                <li><i class="fas fa-check"></i> Marketing dla fotografów</li>
+                            </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPINIE SECTION -->
+        <section id="opinie" class="section reviews-section">
+            <div class="section-header">
+                <h2>Opinie Uczestników</h2>
+                <p>Co mówią fotografowie, którzy przeszli mój kurs</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reviewer-info">
+                            <h4>Anna Kowalska</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Kurs kompletnie zmienił moje podejście do fotografii. W ciągu miesiąca moje zdjęcia wyglądają jak z profesjonalnej sesji. Polecam każdemu!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reviewer-info">
+                            <h4>Marek Nowak</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Najlepsza inwestycja w moją pasję. Patrycja tłumaczy wszystko w sposób bardzo przystępny. Wreszcie rozumiem ustawienia manualne!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="reviewer-info">
+                            <h4>Katarzyna Lewandowska</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Grupa wsparcia jest bezcenna! Mogę zadawać pytania i otrzymuję pomoc zarówno od Patrycji jak i innych uczestników. Super atmosfera!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="section faq-section">
+            <div class="section-header">
+                <h2>Często Zadawane Pytania</h2>
+                <p>Masz wątpliwości? Tutaj znajdziesz odpowiedzi</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Dla kogo jest ten kurs?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kurs jest idealny zarówno dla początkujących, którzy dopiero zaczynają przygodę z fotografią, jak i dla średnio-zaawansowanych, którzy chcą usystematyzować wiedzę i nauczyć się nowych technik.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Jak otrzymam dostęp do kursu?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Dostęp do platformy otrzymasz natychmiast po zaksięgowaniu płatności. Wysłany zostanie do Ciebie email z loginem i hasłem do platformy kursowej.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Czy potrzebuję drogi sprzęt?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nie! Kurs nauczę Cię wykorzystywać w 100% możliwości Twojego aktualnego sprzętu. Ważniejsze od sprzętu jest zrozumienie zasad fotografii.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Na jak długo mam dostęp do kursu?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Dostęp do kursu masz dożywotnio! Otrzymujesz również wszystkie przyszłe aktualizacje i nowe materiały całkowicie za darmo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Czy mogę zwrócić kurs?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tak, masz 30 dni na zwrot kursu bez podawania przyczyny. Jeśli uznasz, że kurs nie spełnia Twoich oczekiwań, zwrócę Ci 100% zainwestowanych środków.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Czy otrzymam certyfikat ukończenia?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tak! Po ukończeniu wszystkich modułów kursu otrzymasz oficjalny certyfikat potwierdzający zdobyte umiejętności, który możesz dodać do swojego portfolio.</p>
                     </div>
                 </div>
             </div>
@@ -203,18 +380,33 @@
         <section id="omnie" class="section about-section">
             <div class="about-container">
                 <div class="about-image">
-                    <img src="3.jpg" alt="Patrycja Trzaskawka" loading="lazy">
+                    <img src="images/3.jpg" alt="Patrycja Trzaskawka" loading="lazy">
                 </div>
                 <div class="about-content">
-                    <h2>Szalenie się cieszę, że tu jesteś!</h2>
+                    <h2>Cześć, jestem Patrycja! 👋</h2>
                     <div class="about-text">
-                        <p>Rozgość się proszę i zobacz to, co wypełnia moje serce…</p>
-                        <p>Jeśli interesuje Cię sesja zdjęciowa, zapraszam do mojego portfolio i do zakładki "Oferta", gdzie znajdziesz najnowszy cennik moich usług, a także szczegółowe informacje dotyczące sesji i przygotowania do niej.</p>
-                        <p>Liczę, że znajdziesz coś dla siebie… Coś co wypełni Cię światłem i pięknem… bo na tym najbardziej mi zależy…</p>
-                        <p>A jeśli marzysz o tym, by poszerzyć wraz ze mną swe umiejętności fotograficzne – zapraszam Cię do kontaktu, gdzie możesz zaznajomić się z moją ofertą i dobrać sesję, która najbardziej zaspokoi twoje potrzeby.</p>
-                        <p>Czekają na Ciebie sesje ślubne, rodzinne, biznesowe, ciążowe i wiele, wiele innych…</p>
-                        <p>Liczę, że wkrótce się spotkamy i nasz wspólny czas będzie dla Ciebie tak samo wyjątkowy i wspaniały jak i dla mnie.</p>
-                        <p class="signature">Czekam na Ciebie z niecierpliwością i z otwartym sercem…<br>Do zobaczenia…<br><strong>Patrycja</strong></p>
+                        <p>Od 8 lat zawodowo zajmuję się fotografią, a moją pasją jest uchwycanie niepowtarzalnych chwil. Przez te lata miałam przyjemność współpracować z setkami klientów i przeprowadziłam dziesiątki sesji zdjęciowych.</p>
+                        
+                        <p>Stworzyłam ten kurs, ponieważ wierzę, że każdy może nauczyć się tworzyć piękne zdjęcia. Niezależnie od tego, czy chcesz fotografować rodzinę, rozwijać się zawodowo czy po prostu wyrażać siebie przez fotografię - jestem tutaj, żeby Ci w tym pomóc.</p>
+                        
+                        <p>W kursie dzielę się wszystkimi sekretami i technikami, które wypracowałam przez lata praktyki. Moim celem jest nie tylko nauczenie Cię technicznych aspektów fotografii, ale również rozbudzenie Twojej kreatywności.</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Przeprowadzonych sesji</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Lat doświadczenia</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1000+</div>
+                                <div class="stat-label">Zadowolonych klientów</div>
+                            </div>
+                        </div>
+                        
+                        <p class="signature">Nie mogę się doczekać, aż zobaczę Twoje pierwsze zdjęcia!<br><strong>Patrycja</strong></p>
                     </div>
                 </div>
             </div>
@@ -223,8 +415,8 @@
         <!-- KONTAKT SECTION -->
         <section id="kontakt" class="section contact-section">
             <div class="section-header">
-                <h2>Skontaktuj Się</h2>
-                <p>Chętnie odpowiem na wszystkie Twoje pytania</p>
+                <h2>Masz Pytania?</h2>
+                <p>Chętnie na wszystko odpowiem</p>
             </div>
             
             <div class="contact-content">
@@ -248,6 +440,13 @@
                         <div>
                             <h4>Lokalizacja</h4>
                             <p>Warszawa, Polska</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Godziny konsultacji</h4>
+                            <p>Pon-Pt: 9:00-17:00</p>
                         </div>
                     </div>
                 </div>
