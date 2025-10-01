@@ -1,23 +1,14 @@
-// Konfiguracja Stripe dla wielu produktów
-document.querySelectorAll('.buy-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const plan = this.getAttribute('data-plan');
-        let stripeUrl = '';
-        
-        switch(plan) {
-            case 'standard':
-                stripeUrl = 'https://buy.stripe.com/9AQeY3eaF2XZ34YcMU';
-                break;
-            case 'premium':
-                stripeUrl = 'https://buy.stripe.com/9AQeY3eaF2XZ34YcMU';
-                break;
-            case 'vip':
-                stripeUrl = 'https://buy.stripe.com/9AQeY3eaF2XZ34YcMU';
-                break;
-        }
-        
-        if(stripeUrl) {
+// Konfiguracja Stripe dla produktu kursu
+document.addEventListener('DOMContentLoaded', function() {
+    const buyCourseBtn = document.getElementById('buyCourse');
+    
+    if (buyCourseBtn) {
+        buyCourseBtn.addEventListener('click', function() {
+            // URL do płatności Stripe dla kursu za 99 zł
+            const stripeUrl = 'https://buy.stripe.com/9AQeY3eaF2XZ34YcMU';
+            
+            // Przekierowanie do Stripe
             window.location.href = stripeUrl;
-        }
-    });
+        });
+    }
 });
