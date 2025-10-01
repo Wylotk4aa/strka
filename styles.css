@@ -5,22 +5,18 @@
     --chocolate: #332521;     
     --noir: #0f0c0b;         
     
-    /* GRADIENTY I AKCENTY */
     --main-gradient: linear-gradient(135deg, var(--taupe) 0%, var(--sand) 100%);
     --accent: var(--taupe);
     --accent-dark: var(--chocolate);
     --accent-light: var(--sand);
     
-    /* TŁA */
     --bg-light: var(--pearl-white);
     --bg-white: #ffffff;
     
-    /* TEKST */
     --text-dark: var(--chocolate);
     --text-light: var(--taupe);
     --text-lighter: var(--sand);
     
-    /* EFEKTY */
     --shadow: 0 8px 32px rgba(51, 37, 33, 0.08);
     --shadow-strong: 0 20px 50px rgba(51, 37, 33, 0.12);
     --radius: 16px;
@@ -31,6 +27,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -189,6 +189,7 @@ nav ul li a:hover {
     gap: 15px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: auto;
 }
 
 .project-card:hover .project-overlay {
@@ -207,6 +208,7 @@ nav ul li a:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     color: var(--text-dark);
+    pointer-events: auto;
 }
 
 .zoom-btn:hover {
@@ -247,152 +249,155 @@ nav ul li a:hover {
     font-weight: 600;
 }
 
-/* OFERTY */
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+/* PRODUKT SECTION */
+.product-section {
+    background: linear-gradient(135deg, var(--pearl-white) 0%, #ffffff 50%, var(--pearl-white) 100%);
+    border-radius: var(--radius-lg);
+    margin: 40px 5% 80px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(215, 196, 183, 0.3);
+}
+
+.product-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 60px;
 }
 
-.pricing-card {
-    background: white;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 40px 30px;
+.product-header {
     text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    border: 2px solid transparent;
+    margin-bottom: 60px;
 }
 
-.pricing-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-strong);
-}
-
-.pricing-card.popular {
-    border-color: var(--accent);
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #ffffff 0%, var(--pearl-white) 100%);
-}
-
-.popular-badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--main-gradient);
-    color: white;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.card-header {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(215, 196, 183, 0.3);
-}
-
-.card-header h3 {
-    font-size: 1.6rem;
-    color: var(--text-dark);
+.product-header h1 {
+    font-size: 3.5rem;
+    color: var(--chocolate);
     margin-bottom: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.product-info h2 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
 
-.card-header .price {
-    font-size: 3rem;
+.product-description {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.price-section {
+    margin-bottom: 40px;
+}
+
+.price {
+    font-size: 4rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.card-header p {
-    color: var(--text-light);
-    font-size: 1rem;
-}
-
-.features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-    text-align: left;
-}
-
-.features-list li {
-    padding: 12px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1rem;
-    border-bottom: 1px solid rgba(215, 196, 183, 0.2);
-}
-
-.features-list .fa-check {
-    color: var(--taupe);
-    font-size: 1.1rem;
-}
-
-.features-list .fa-times {
-    color: var(--sand);
-    font-size: 1.1rem;
-}
-
-.buy-btn {
+.buy-now-btn {
     background: var(--main-gradient);
     color: white;
     border: none;
     border-radius: 25px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    padding: 15px 40px;
+    padding: 18px 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
     box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 300px;
 }
 
-.buy-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(158, 143, 134, 0.3);
+.buy-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(158, 143, 134, 0.4);
 }
 
-.popular-btn {
-    background: var(--accent-dark);
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-.guarantee {
-    text-align: center;
-    margin-top: 50px;
-    padding: 25px;
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
     background: white;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    border: 1px solid rgba(215, 196, 183, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(5px);
+    border-color: var(--taupe);
+}
+
+.feature-item i {
+    color: var(--taupe);
+    font-size: 1.5rem;
+    width: 30px;
+}
+
+.feature-item span {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.product-image {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 400px;
+    background: var(--bg-light);
+    border: 2px dashed var(--sand);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid rgba(215, 196, 183, 0.3);
+    color: var(--text-light);
 }
 
-.guarantee i {
-    color: var(--accent);
-    font-size: 1.8rem;
+.image-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
-.guarantee p {
-    font-size: 1.1rem;
-    margin: 0;
-    color: var(--text-dark);
+.image-placeholder p {
+    font-size: 1.2rem;
 }
 
 /* O MNIE */
@@ -533,6 +538,7 @@ nav ul li a:hover {
     height: 100%;
     background: rgba(51, 37, 33, 0.95);
     backdrop-filter: blur(10px);
+    pointer-events: auto;
 }
 
 .modal-content {
@@ -546,6 +552,7 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     border-radius: 10px;
     box-shadow: 0 0 50px rgba(15, 12, 11, 0.8);
+    pointer-events: none;
 }
 
 .close-modal {
@@ -565,6 +572,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: auto;
 }
 
 .close-modal:hover {
@@ -583,6 +591,7 @@ nav ul li a:hover {
     background: rgba(15, 12, 11, 0.7);
     padding: 10px 20px;
     border-radius: 25px;
+    pointer-events: none;
 }
 
 /* FOOTER */
@@ -636,6 +645,12 @@ footer {
 
 /* RESPONSYWNOŚĆ */
 @media (max-width: 1024px) {
+    .product-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
     .about-container {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -679,20 +694,20 @@ footer {
         font-size: 2.2rem;
     }
 
+    .product-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .product-container {
+        padding: 40px;
+    }
+
     .about-content h2 {
         font-size: 1.8rem;
     }
 
     .portfolio-grid {
         grid-template-columns: 1fr;
-    }
-
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-card.popular {
-        transform: none;
     }
 
     .contact-section {
@@ -719,6 +734,22 @@ footer {
 
     .section-header p {
         font-size: 1rem;
+    }
+
+    .product-header h1 {
+        font-size: 2rem;
+    }
+
+    .product-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .product-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .price {
+        font-size: 3rem;
     }
 
     .about-content h2 {
